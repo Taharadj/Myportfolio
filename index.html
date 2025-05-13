@@ -133,38 +133,46 @@
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
 
-    <!-- Script WordCloud -->
-    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
-    <script>
-        const words = [
-            ['Data', 12],
-            ['SIG', 10],
-            ['Expression de besoin', 9],
-            ['Atelier métier', 8],
-            ['SI', 8],
-            ['Jira', 10],
-            ['ArcGIS', 9],
-            ['QGIS', 7],
-            ['Scrum', 8],
-            ['Kanban', 6],
-            ['User Story', 5],
-            ['Sprint', 7],
-            ['Agile', 9],
-            ['Rétrospective', 4],
-            ['Backlog', 6],
-        ];
+<section id="wordcloud">
+    <canvas id="wordCloudCanvas"></canvas>
+</section>
 
-        WordCloud(document.getElementById('wordCloudCanvas'), {
-            list: words,
-            gridSize: 10,
-            weightFactor: 10,
-            fontFamily: 'Arial',
-            color: 'random-dark',
-            backgroundColor: '#f9f9f9',
-            rotateRatio: 0.5,
-            rotationSteps: 2,
-            shuffle: true
-        });
-    </script>
+<!-- Script WordCloud -->
+<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+<script>
+    const words = [
+        ['Data', 15],
+        ['SIG', 13],
+        ['Expression de besoin', 12],
+        ['Atelier métier', 11],
+        ['SI', 10],
+        ['Jira', 13],
+        ['ArcGIS', 11],
+        ['QGIS', 10],
+        ['Scrum', 10],
+        ['Kanban', 9],
+        ['User Story', 8],
+        ['Sprint', 9],
+        ['Agile', 11],
+        ['Rétrospective', 6],
+        ['Backlog', 8],
+    ];
+
+    WordCloud(document.getElementById('wordCloudCanvas'), {
+        list: words,
+        gridSize: Math.round(16 * window.innerWidth / 1024),
+        weightFactor: function (size) {
+            return size * (window.innerWidth < 600 ? 1.2 : 1.5);
+        },
+        fontFamily: 'Arial, sans-serif',
+        color: 'random-dark',
+        backgroundColor: '#f9f9f9',
+        rotateRatio: 0.5,
+        rotationSteps: 2,
+        shuffle: true,
+        drawOutOfBound: false,
+        shrinkToFit: true,
+    });
+</script>
 </body>
 </html>
