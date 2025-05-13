@@ -1,0 +1,36 @@
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.container.left {
+  left: 0;
+}
+.container.right {
+  left: 50%;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #0057b7;
+  border: 4px solid white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.content {
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
