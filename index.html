@@ -44,5 +44,50 @@
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
+    <section id="lexique" style="text-align: center; margin-top: 50px;">
+    <h2>Champs lexical</h2>
+    <canvas width="500" height="500" id="myCanvas" style="margin: auto;">
+        <p>Votre navigateur ne supporte pas Canvas</p>
+    </canvas>
+
+    <div id="tags" style="display: none;">
+        <ul>
+            <li><a href="#">Data</a></li>
+            <li><a href="#">SIG</a></li>
+            <li><a href="#">Expression de besoin</a></li>
+            <li><a href="#">Atelier métier</a></li>
+            <li><a href="#">SI</a></li>
+            <li><a href="#">Jira</a></li>
+            <li><a href="#">ArcGIS</a></li>
+            <li><a href="#">QGIS</a></li>
+            <li><a href="#">Scrum</a></li>
+            <li><a href="#">Kanban</a></li>
+            <li><a href="#">User Story</a></li>
+            <li><a href="#">Sprint</a></li>
+            <li><a href="#">Agile</a></li>
+            <li><a href="#">Rétrospective</a></li>
+            <li><a href="#">Backlog</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Script pour TagCanvas -->
+<script src="https://www.goat1000.com/tagcanvas.min.js" defer></script>
+<script>
+    window.addEventListener('load', function () {
+        if (!TagCanvas.Start('myCanvas', 'tags', {
+            textColour: '#003366',
+            outlineColour: '#cccccc',
+            reverse: true,
+            depth: 0.8,
+            maxSpeed: 0.05,
+            weight: true,
+        })) {
+            document.getElementById('myCanvas').style.display = 'none';
+        }
+    });
+</script>
+
 </body>
 </html>
+
