@@ -41,16 +41,51 @@
         <p>Diplômé de la Sorbonne Université avec un Master en Géographie, Aménagement, Environnement et Logistique des Echanges, je suis actuellement Chef de projet SIG / Data / MOA chez Rhôn'Telecom. Fort de mes compétences en systèmes d'information géographique (SIG) et en analyse spatiale, je pilote des projets DATA, du cadrage jusqu'à leur mise en production...</p>
         <p>Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, veuillez consulter ce lien : <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">Calendly</a></p>
     </section>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Champs lexical</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
-<canvas id="wordCloudCanvas" width="500" height="500"></canvas>
+        #wordCloudCanvas {
+            display: block;
+            margin: 50px auto;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
 
+<section id="lexique">
+    <h2>Champs lexical</h2>
+    <canvas id="wordCloudCanvas" width="500" height="500"></canvas>
+</section>
+
+<!-- Script WordCloud2.js -->
+<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
 <script>
     const words = [
-        ['Data', 12], ['SIG', 10], ['Expression de besoin', 9],
-        ['Atelier métier', 8], ['SI', 8], ['Jira', 10],
-        ['ArcGIS', 9], ['QGIS', 7], ['Scrum', 8],
-        ['Kanban', 6], ['User Story', 5], ['Sprint', 7],
-        ['Agile', 9], ['Rétrospective', 4], ['Backlog', 6],
+        ['Data', 12],
+        ['SIG', 10],
+        ['Expression de besoin', 9],
+        ['Atelier métier', 8],
+        ['SI', 8],
+        ['Jira', 10],
+        ['ArcGIS', 9],
+        ['QGIS', 7],
+        ['Scrum', 8],
+        ['Kanban', 6],
+        ['User Story', 5],
+        ['Sprint', 7],
+        ['Agile', 9],
+        ['Rétrospective', 4],
+        ['Backlog', 6],
     ];
 
     WordCloud(document.getElementById('wordCloudCanvas'), {
@@ -60,10 +95,13 @@
         fontFamily: 'Arial',
         color: 'random-dark',
         backgroundColor: '#f9f9f9',
+        rotateRatio: 0.5,
+        rotationSteps: 2,
     });
 </script>
 
-
+</body>
+</html>
     
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
