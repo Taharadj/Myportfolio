@@ -1,36 +1,82 @@
-
+/* style.css */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4faff;
-    color: #003366;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-header, footer {
+header {
     background-color: #003366;
-    color: white;
-    padding: 20px;
+    color: #fff;
+    padding: 2rem 0;
     text-align: center;
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 51, 102, 0.1);
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-h1, h2 {
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
     color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e7e7e7;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 3px;
 }
 
 a {
-    color: #0066cc;
+    color: #003366;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #003366;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#lexique {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
