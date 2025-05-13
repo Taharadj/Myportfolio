@@ -42,56 +42,29 @@
         <p>Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, veuillez consulter ce lien : <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">Calendly</a></p>
     </section>
 
-    <section id="lexique" style="text-align: center; margin-top: 50px;">
-        <h2>Champs lexical</h2>
-        <canvas width="500" height="500" id="myCanvas" style="margin: auto;">
-            <p>Votre navigateur ne supporte pas Canvas</p>
-        </canvas>
+<canvas id="wordCloudCanvas" width="500" height="500"></canvas>
 
-        <div id="tags" style="display: none;">
-            <ul>
-                <li><a href="#">Data</a></li>
-                <li><a href="#">SIG</a></li>
-                <li><a href="#">Expression de besoin</a></li>
-                <li><a href="#">Atelier métier</a></li>
-                <li><a href="#">SI</a></li>
-                <li><a href="#">Jira</a></li>
-                <li><a href="#">ArcGIS</a></li>
-                <li><a href="#">QGIS</a></li>
-                <li><a href="#">Scrum</a></li>
-                <li><a href="#">Kanban</a></li>
-                <li><a href="#">User Story</a></li>
-                <li><a href="#">Sprint</a></li>
-                <li><a href="#">Agile</a></li>
-                <li><a href="#">Rétrospective</a></li>
-                <li><a href="#">Backlog</a></li>
-            </ul>
-        </div>
-    </section>
+<script>
+    const words = [
+        ['Data', 12], ['SIG', 10], ['Expression de besoin', 9],
+        ['Atelier métier', 8], ['SI', 8], ['Jira', 10],
+        ['ArcGIS', 9], ['QGIS', 7], ['Scrum', 8],
+        ['Kanban', 6], ['User Story', 5], ['Sprint', 7],
+        ['Agile', 9], ['Rétrospective', 4], ['Backlog', 6],
+    ];
 
+    WordCloud(document.getElementById('wordCloudCanvas'), {
+        list: words,
+        gridSize: 8,
+        weightFactor: 10,
+        fontFamily: 'Arial',
+        color: 'random-dark',
+        backgroundColor: '#f9f9f9',
+    });
+</script>
+
+
+    
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
-
-    <!-- Script pour TagCanvas -->
-    <script src="https://www.goat1000.com/tagcanvas.min.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof TagCanvas !== 'undefined' && TagCanvas.Start) {
-                if (!TagCanvas.Start('myCanvas', 'tags', {
-                    textColour: '#003366',
-                    outlineColour: '#cccccc',
-                    reverse: true,
-                    depth: 0.8,
-                    maxSpeed: 0.05,
-                    weight: true,
-                })) {
-                    document.getElementById('myCanvas').style.display = 'none';
-                }
-            } else {
-                console.error('TagCanvas is not loaded correctly.');
-            }
-        });
-    </script>
-</body>
-</html>
