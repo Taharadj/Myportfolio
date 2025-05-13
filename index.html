@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Tahar Adjabi, Chef de projet B2B – SFR">
     <title>Portfolio de Tahar Adjabi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
 
     <section id="contact">
         <h2>Coordonnées</h2>
-        <p>📞 0603154461</p>
+        <p>📞 <a href="tel:+33603154461">0603154461</a></p>
         <p>📧 <a href="mailto:tahar.adjabi@outlook.fr">tahar.adjabi@outlook.fr</a></p>
         <p>🔗 <a href="https://www.linkedin.com/in/tahar-adjabi" target="_blank">LinkedIn</a></p>
     </section>
@@ -41,53 +42,56 @@
         <p>Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, veuillez consulter ce lien : <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">Calendly</a></p>
     </section>
 
+    <section id="lexique" style="text-align: center; margin-top: 50px;">
+        <h2>Champs lexical</h2>
+        <canvas width="500" height="500" id="myCanvas" style="margin: auto;">
+            <p>Votre navigateur ne supporte pas Canvas</p>
+        </canvas>
+
+        <div id="tags" style="display: none;">
+            <ul>
+                <li><a href="#">Data</a></li>
+                <li><a href="#">SIG</a></li>
+                <li><a href="#">Expression de besoin</a></li>
+                <li><a href="#">Atelier métier</a></li>
+                <li><a href="#">SI</a></li>
+                <li><a href="#">Jira</a></li>
+                <li><a href="#">ArcGIS</a></li>
+                <li><a href="#">QGIS</a></li>
+                <li><a href="#">Scrum</a></li>
+                <li><a href="#">Kanban</a></li>
+                <li><a href="#">User Story</a></li>
+                <li><a href="#">Sprint</a></li>
+                <li><a href="#">Agile</a></li>
+                <li><a href="#">Rétrospective</a></li>
+                <li><a href="#">Backlog</a></li>
+            </ul>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
-    <section id="lexique" style="text-align: center; margin-top: 50px;">
-    <h2>Champs lexical</h2>
-    <canvas width="500" height="500" id="myCanvas" style="margin: auto;">
-        <p>Votre navigateur ne supporte pas Canvas</p>
-    </canvas>
 
-    <div id="tags" style="display: none;">
-        <ul>
-            <li><a href="#">Data</a></li>
-            <li><a href="#">SIG</a></li>
-            <li><a href="#">Expression de besoin</a></li>
-            <li><a href="#">Atelier métier</a></li>
-            <li><a href="#">SI</a></li>
-            <li><a href="#">Jira</a></li>
-            <li><a href="#">ArcGIS</a></li>
-            <li><a href="#">QGIS</a></li>
-            <li><a href="#">Scrum</a></li>
-            <li><a href="#">Kanban</a></li>
-            <li><a href="#">User Story</a></li>
-            <li><a href="#">Sprint</a></li>
-            <li><a href="#">Agile</a></li>
-            <li><a href="#">Rétrospective</a></li>
-            <li><a href="#">Backlog</a></li>
-        </ul>
-    </div>
-</section>
-
-<!-- Script pour TagCanvas -->
-<script src="https://www.goat1000.com/tagcanvas.min.js" defer></script>
-<script>
-    window.addEventListener('load', function () {
-        if (!TagCanvas.Start('myCanvas', 'tags', {
-            textColour: '#003366',
-            outlineColour: '#cccccc',
-            reverse: true,
-            depth: 0.8,
-            maxSpeed: 0.05,
-            weight: true,
-        })) {
-            document.getElementById('myCanvas').style.display = 'none';
-        }
-    });
-</script>
-
+    <!-- Script pour TagCanvas -->
+    <script src="https://www.goat1000.com/tagcanvas.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof TagCanvas !== 'undefined' && TagCanvas.Start) {
+                if (!TagCanvas.Start('myCanvas', 'tags', {
+                    textColour: '#003366',
+                    outlineColour: '#cccccc',
+                    reverse: true,
+                    depth: 0.8,
+                    maxSpeed: 0.05,
+                    weight: true,
+                })) {
+                    document.getElementById('myCanvas').style.display = 'none';
+                }
+            } else {
+                console.error('TagCanvas is not loaded correctly.');
+            }
+        });
+    </script>
 </body>
 </html>
-
