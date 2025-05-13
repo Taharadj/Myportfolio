@@ -5,10 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Tahar Adjabi, Chef de projet B2B – SFR">
     <title>Portfolio de Tahar Adjabi</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* RESET + BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header, section, footer {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        header p {
+            margin-top: 5px;
+            color: #555;
+        }
+
+        h2, h3 {
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        #wordCloudCanvas {
+            width: 100%;
+            height: 400px;
+            margin: 0 auto;
+            display: block;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Tahar Adjabi</h1>
         <p>Chef de projet B2B – SFR</p>
@@ -39,65 +119,52 @@
     <section id="summary">
         <h2>Résumé</h2>
         <p>Diplômé de la Sorbonne Université avec un Master en Géographie, Aménagement, Environnement et Logistique des Echanges, je suis actuellement Chef de projet SIG / Data / MOA chez Rhôn'Telecom. Fort de mes compétences en systèmes d'information géographique (SIG) et en analyse spatiale, je pilote des projets DATA, du cadrage jusqu'à leur mise en production...</p>
-        <p>Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, veuillez consulter ce lien : <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">Calendly</a></p>
+        <p>Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, veuillez consulter ce lien : 
+            <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">Calendly</a>
+        </p>
     </section>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Champs lexical</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
 
-        #wordCloudCanvas {
-            display: block;
-            margin: 50px auto;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-    </style>
-</head>
-<body>
+    <section id="wordcloud">
+        <h2>Champs lexical</h2>
+        <canvas id="wordCloudCanvas"></canvas>
+    </section>
 
-<!-- Script WordCloud2.js -->
-<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
-<script>
-    const words = [
-        ['Data', 12],
-        ['SIG', 10],
-        ['Expression de besoin', 9],
-        ['Atelier métier', 8],
-        ['SI', 8],
-        ['Jira', 10],
-        ['ArcGIS', 9],
-        ['QGIS', 7],
-        ['Scrum', 8],
-        ['Kanban', 6],
-        ['User Story', 5],
-        ['Sprint', 7],
-        ['Agile', 9],
-        ['Rétrospective', 4],
-        ['Backlog', 6],
-    ];
-
-    WordCloud(document.getElementById('wordCloudCanvas'), {
-        list: words,
-        gridSize: 8,
-        weightFactor: 10,
-        fontFamily: 'Arial',
-        color: 'random-dark',
-        backgroundColor: '#f9f9f9',
-        rotateRatio: 0.5,
-        rotationSteps: 2,
-    });
-</script>
-
-</body>
-</html>
-    
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
+
+    <!-- Script WordCloud -->
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+    <script>
+        const words = [
+            ['Data', 12],
+            ['SIG', 10],
+            ['Expression de besoin', 9],
+            ['Atelier métier', 8],
+            ['SI', 8],
+            ['Jira', 10],
+            ['ArcGIS', 9],
+            ['QGIS', 7],
+            ['Scrum', 8],
+            ['Kanban', 6],
+            ['User Story', 5],
+            ['Sprint', 7],
+            ['Agile', 9],
+            ['Rétrospective', 4],
+            ['Backlog', 6],
+        ];
+
+        WordCloud(document.getElementById('wordCloudCanvas'), {
+            list: words,
+            gridSize: 10,
+            weightFactor: 10,
+            fontFamily: 'Arial',
+            color: 'random-dark',
+            backgroundColor: '#f9f9f9',
+            rotateRatio: 0.5,
+            rotationSteps: 2,
+            shuffle: true
+        });
+    </script>
+</body>
+</html>
