@@ -6,173 +6,94 @@
     <meta name="description" content="Portfolio de Tahar Adjabi, Chef de projet B2B – SFR">
     <title>Portfolio de Tahar Adjabi</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        /* RESET + BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
-        }
-
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        header, section, footer {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 2em;
-            color: #333;
-        }
-
-        header p {
-            margin-top: 5px;
-            color: #555;
-        }
-
-        h2, h3 {
-            color: #222;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-
-        #wordCloudCanvas {
-            width: 100%;
-            height: 400px;
-            margin: 0 auto;
-            display: block;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-
-            header h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Tahar Adjabi</h1>
+            <p>Chef de projet B2B – SFR</p>
+            <p>Marly-la-Ville, Île-de-France, France</p>
+        </header>
 
-    <header>
-        <h1>Tahar Adjabi</h1>
-        <p>Chef de projet B2B – SFR</p>
-        <p>Marly-la-Ville, Île-de-France, France</p>
-    </header>
+        <section id="contact">
+            <h2>Coordonnées</h2>
+            <ul class="contact-list">
+                <li>📞 <a href="tel:+33603154461">0603154461</a></li>
+                <li>📧 <a href="mailto:tahar.adjabi@outlook.fr">tahar.adjabi@outlook.fr</a></li>
+                <li>🔗 <a href="https://www.linkedin.com/in/tahar-adjabi" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
 
-    <section id="contact">
-        <h2>Coordonnées</h2>
-        <p>📞 <a href="tel:+33603154461">0603154461</a></p>
-        <p>📧 <a href="mailto:tahar.adjabi@outlook.fr">tahar.adjabi@outlook.fr</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/tahar-adjabi" target="_blank">LinkedIn</a></p>
-    </section>
+        <section id="skills">
+            <h2>Principales compétences</h2>
+            <ul>
+                <li>Visualisation de données</li>
+                <li>Analyse des données</li>
+                <li>Ingénierie informatique</li>
+            </ul>
+            <h3>Langues</h3>
+            <ul>
+                <li>Anglais (Professional Working)</li>
+                <li>Français (Native or Bilingual)</li>
+            </ul>
+        </section>
 
-    <section id="skills">
-        <h2>Principales compétences</h2>
-        <ul>
-            <li>Visualisation de données</li>
-            <li>Analyse des données</li>
-            <li>Ingénierie informatique</li>
-        </ul>
-        <h3>Langues</h3>
-        <ul>
-            <li>Anglais (Professional Working)</li>
-            <li>Français (Native or Bilingual)</li>
-        </ul>
-    </section>
+        <section id="summary">
+            <h2>Résumé</h2>
+            <p>
+                Diplômé de la Sorbonne Université avec un Master en Géographie, Aménagement, Environnement et Logistique des Échanges, je suis actuellement Chef de projet SIG / Data / MOA chez Rhôn'Telecom. Fort de mes compétences en systèmes d'information géographique (SIG) et en analyse spatiale, je pilote des projets DATA, du cadrage jusqu'à leur mise en production.
+            </p>
+            <p>
+                Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, consultez <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">mon Calendly</a>.
+            </p>
+        </section>
 
-    <section id="summary">
-        <h2>Résumé</h2>
-        <p>Diplômé de la Sorbonne Université avec un Master en Géographie, Aménagement, Environnement et Logistique des Echanges, je suis actuellement Chef de projet SIG / Data / MOA chez Rhôn'Telecom. Fort de mes compétences en systèmes d'information géographique (SIG) et en analyse spatiale, je pilote des projets DATA, du cadrage jusqu'à leur mise en production...</p>
-        <p>Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, veuillez consulter ce lien : 
-            <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">Calendly</a>
-        </p>
-    </section>
-
-    <section id="wordcloud">
-        <h2>Champs lexical</h2>
-        <canvas id="wordCloudCanvas"></canvas>
-    </section>
+        <section id="wordcloud">
+            <h2>Champs lexical</h2>
+            <canvas id="wordCloudCanvas"></canvas>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
 
-<section id="wordcloud">
-    <canvas id="wordCloudCanvas"></canvas>
-</section>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+    <script>
+        const words = [
+            ['Data', 15],
+            ['SIG', 13],
+            ['Expression de besoin', 12],
+            ['Atelier métier', 11],
+            ['SI', 10],
+            ['Jira', 13],
+            ['ArcGIS', 11],
+            ['QGIS', 10],
+            ['Scrum', 10],
+            ['Kanban', 9],
+            ['User Story', 8],
+            ['Sprint', 9],
+            ['Agile', 11],
+            ['Rétrospective', 6],
+            ['Backlog', 8],
+        ];
 
-<!-- Script WordCloud -->
-<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
-<script>
-    const words = [
-        ['Data', 15],
-        ['SIG', 13],
-        ['Expression de besoin', 12],
-        ['Atelier métier', 11],
-        ['SI', 10],
-        ['Jira', 13],
-        ['ArcGIS', 11],
-        ['QGIS', 10],
-        ['Scrum', 10],
-        ['Kanban', 9],
-        ['User Story', 8],
-        ['Sprint', 9],
-        ['Agile', 11],
-        ['Rétrospective', 6],
-        ['Backlog', 8],
-    ];
-
-    WordCloud(document.getElementById('wordCloudCanvas'), {
-        list: words,
-        gridSize: Math.round(16 * window.innerWidth / 1024),
-        weightFactor: function (size) {
-            return size * (window.innerWidth < 600 ? 1.2 : 1.5);
-        },
-        fontFamily: 'Arial, sans-serif',
-        color: 'random-dark',
-        backgroundColor: '#f9f9f9',
-        rotateRatio: 0.5,
-        rotationSteps: 2,
-        shuffle: true,
-        drawOutOfBound: false,
-        shrinkToFit: true,
-    });
-</script>
+        WordCloud(document.getElementById('wordCloudCanvas'), {
+            list: words,
+            gridSize: Math.round(16 * window.innerWidth / 1024),
+            weightFactor: function (size) {
+                return size * (window.innerWidth < 600 ? 1.2 : 1.5);
+            },
+            fontFamily: 'Arial, sans-serif',
+            color: 'random-dark',
+            backgroundColor: '#f9f9f9',
+            rotateRatio: 0.5,
+            rotationSteps: 2,
+            shuffle: true,
+            drawOutOfBound: false,
+            shrinkToFit: true,
+        });
+    </script>
 </body>
 </html>
