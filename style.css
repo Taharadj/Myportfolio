@@ -207,3 +207,60 @@ footer {
   }
 }
 
+#themeToggle {
+  background-color: transparent;
+  color: #81ecec;
+  border: 1px solid #81ecec;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  float: right;
+  margin-top: -2.5em;
+  margin-right: 1em;
+  transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+  background-color: #81ecec;
+  color: #121212;
+}
+body.light-mode {
+  background-color: #f0f8ff;
+  color: #2c3e50;
+}
+
+body.light-mode .container {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #2c3e50;
+}
+
+body.light-mode a {
+  color: #2980b9;
+}
+
+body.light-mode h2 {
+  color: #16a085;
+  border-color: #16a085;
+}
+
+body.light-mode h3 {
+  color: #2980b9;
+}
+
+body.light-mode footer {
+  background-color: #fff;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+body.light-mode #themeToggle {
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+body.light-mode #themeToggle:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
