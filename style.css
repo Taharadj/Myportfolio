@@ -159,13 +159,7 @@ footer {
 }
 
 .timeline-item:after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  background-color: #16a085;
-  left: 10px;
-  top: 0;
+  content: none;
 }
 
 /* Responsivité de la frise temporelle */
