@@ -130,14 +130,7 @@ footer {
 }
 
 .timeline-item:before {
-  content: '';
-  position: absolute;
-  left: -35px;
-  top: 15px;
-  width: 10px;
-  height: 10px;
-  background-color: #16a085;
-  border-radius: 50%;
+  content: none;
 }
 
 /* Frise temporelle alternée */
