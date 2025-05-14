@@ -58,41 +58,71 @@
     <footer>
         <p>&copy; 2025 Tahar Adjabi</p>
     </footer>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuage de Mots Flottants</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      overflow: hidden;
+      margin: 0;
+      height: 100vh;
+      font-family: sans-serif;
+      position: relative;
+    }
 
-    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
-    <script>
-        const words = [
-            ['Data', 15],
-            ['SIG', 13],
-            ['Expression de besoin', 12],
-            ['Atelier métier', 11],
-            ['SI', 10],
-            ['Jira', 13],
-            ['ArcGIS', 11],
-            ['QGIS', 10],
-            ['Scrum', 10],
-            ['Kanban', 9],
-            ['User Story', 8],
-            ['Sprint', 9],
-            ['Agile', 11],
-            ['Rétrospective', 6],
-            ['Backlog', 8],
-        ];
+    .word {
+      position: absolute;
+      animation: float 6s ease-in-out infinite;
+      white-space: nowrap;
+    }
 
-        WordCloud(document.getElementById('wordCloudCanvas'), {
-            list: words,
-            gridSize: Math.round(16 * window.innerWidth / 1024),
-            weightFactor: function (size) {
-                return size * (window.innerWidth < 600 ? 1.2 : 1.5);
-            },
-            fontFamily: 'Arial, sans-serif',
-            color: 'random-dark',
-            backgroundColor: '#f9f9f9',
-            rotateRatio: 0.5,
-            rotationSteps: 2,
-            shuffle: true,
-            drawOutOfBound: false,
-            shrinkToFit: true,
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.8; }
+      50% { transform: translateY(-20px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const words = [
+      ['Data', 12],
+      ['SIG', 10],
+      ['Expression de besoin', 9],
+      ['Atelier métier', 8],
+      ['SI', 8],
+      ['Jira', 10],
+      ['ArcGIS', 9],
+      ['QGIS', 7],
+      ['Scrum', 8],
+      ['Kanban', 6],
+      ['User Story', 5],
+      ['Sprint', 7],
+      ['Agile', 9],
+      ['Rétrospective', 4],
+      ['Backlog', 6],
+    ];
+
+    const body = document.body;
+    const colors = ["#2c3e50", "#16a085", "#8e44ad", "#2980b9", "#d35400"];
+
+    words.forEach(([text, weight]) => {
+      const wordEl = document.createElement('div');
+      wordEl.className = 'word';
+      wordEl.textContent = text;
+      wordEl.style.fontSize = `${weight * 2 + 10}px`;
+      wordEl.style.left = `${Math.random() * 90}%`;
+      wordEl.style.top = `${Math.random() * 80}%`;
+      wordEl.style.color = colors[Math.floor(Math.random() * colors.length)];
+      wordEl.style.animationDuration = `${4 + Math.random() * 4}s`;
+      body.appendChild(wordEl);
+    });
+  </script>
+</body>
+</html>
         });
     </script>
 </body>
