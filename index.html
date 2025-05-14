@@ -43,6 +43,20 @@
     }
   </style>
 </head>
+  <script>
+  const toggleBtn = document.getElementById('themeToggle');
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+  });
+
+  // Initial load
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+  }
+</script>
+
 <body>
 
   <!-- MOTS FLOTTANTS EN ARRIÈRE-PLAN -->
