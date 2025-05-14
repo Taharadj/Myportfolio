@@ -7,57 +7,6 @@
   <title>Portfolio de Tahar Adjabi</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* Thème clair par défaut */
-    body {
-      background-color: #f0f8ff;
-      color: #000;
-      margin: 0;
-      font-family: sans-serif;
-      position: relative;
-      z-index: 0;
-    }
-
-    /* Thème sombre si système en mode sombre */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-      }
-
-      a {
-        color: #90caf9;
-      }
-    }
-
-    .container {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-    }
-
-    .word {
-      position: absolute;
-      animation: float 6s ease-in-out infinite;
-      white-space: nowrap;
-      opacity: 0.1;
-      pointer-events: none;
-      z-index: 0;
-      font-weight: bold;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); opacity: 0.1; }
-      50% { transform: translateY(-20px); opacity: 0.15; }
-      100% { transform: translateY(0); opacity: 0.1; }
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
 </head>
 <body>
 
@@ -103,82 +52,81 @@
         Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, consultez <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">mon Calendly</a>.
       </p>
     </section>
+
+    <section id="timeline">
+      <h2>Parcours professionnel et formations</h2>
+      <div class="timeline">
+
+        <!-- Expérience 1 -->
+        <div class="timeline-item">
+          <img src="rhonetelecom.png" alt="Rhôn'Telecom logo" class="timeline-logo">
+          <div class="timeline-content">
+            <strong>Expérience</strong>
+            <h3>Rhôn'Telecom</h3>
+            <p><em>Chef de projet</em><br>septembre 2020 – Présent (4 ans 9 mois)<br>Champs-sur-Marne, France</p>
+          </div>
+        </div>
+
+        <!-- Expérience 2 -->
+        <div class="timeline-item">
+          <img src="enedis.png" alt="Enedis logo" class="timeline-logo">
+          <div class="timeline-content">
+            <strong>Expérience</strong>
+            <h3>Enedis (ex ERDF)</h3>
+            <p><em>Géomaticien - technicien cartographe</em><br>juillet 2019 – novembre 2019 (5 mois)<br>Noisy-Le-Grand, France</p>
+          </div>
+        </div>
+
+        <!-- Expérience 3 -->
+        <div class="timeline-item">
+          <img src="spie.png" alt="SPIE logo" class="timeline-logo">
+          <div class="timeline-content">
+            <strong>Expérience</strong>
+            <h3>SPIE CityNetworks</h3>
+            <p><em>Technicien SIG / Dessinateur projeteur</em><br>juin 2018 – septembre 2018 (4 mois)<br>Île-de-France</p>
+          </div>
+        </div>
+
+        <!-- Formation 1 -->
+        <div class="timeline-item">
+          <img src="sorbonne.png" alt="Sorbonne Université logo" class="timeline-logo">
+          <div class="timeline-content">
+            <strong>Formation</strong>
+            <h3>Sorbonne Université</h3>
+            <p><em>Master Géographie et Aménagement (GAELE)</em><br>2018 – 2020</p>
+          </div>
+        </div>
+
+        <!-- Formation 2 -->
+        <div class="timeline-item">
+          <img src="paris1.png" alt="Paris 1 logo" class="timeline-logo">
+          <div class="timeline-content">
+            <strong>Formation</strong>
+            <h3>Université Paris 1 Panthéon-Sorbonne</h3>
+            <p><em>Licence, Géographie et Aménagement</em><br>2016 – 2018</p>
+          </div>
+        </div>
+
+        <!-- Formation 3 -->
+        <div class="timeline-item">
+          <img src="usthb.png" alt="USTHB logo" class="timeline-logo">
+          <div class="timeline-content">
+            <strong>Formation</strong>
+            <h3>USTHB</h3>
+            <p><em>Sciences de la Terre</em><br>2012 – 2015</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
 
-<!-- ajout -->
-  <section id="timeline">
-  <h2>Parcours professionnel et formations</h2>
-  <div class="timeline">
-
-    <!-- Expérience 1 -->
-    <div class="timeline-item left">
-      <img src="rhonetelecom.png" alt="Rhôn'Telecom logo" class="timeline-logo">
-      <div class="content">
-        <strong>Expérience</strong>
-        <h3>Rhôn'Telecom</h3>
-        <p><em>Chef de projet</em><br>septembre 2020 – Présent (4 ans 9 mois)<br>Champs-sur-Marne, France</p>
-      </div>
-    </div>
-
-    <!-- Expérience 2 -->
-    <div class="timeline-item right">
-      <img src="enedis.png" alt="Enedis logo" class="timeline-logo">
-      <div class="content">
-        <strong>Expérience</strong>
-        <h3>Enedis (ex ERDF)</h3>
-        <p><em>Géomaticien - technicien cartographe</em><br>juillet 2019 – novembre 2019 (5 mois)<br>Noisy-Le-Grand, France</p>
-      </div>
-    </div>
-
-    <!-- Expérience 3 -->
-    <div class="timeline-item left">
-      <img src="spie.png" alt="SPIE logo" class="timeline-logo">
-      <div class="content">
-        <strong>Expérience</strong>
-        <h3>SPIE CityNetworks</h3>
-        <p><em>Technicien SIG / Dessinateur projeteur</em><br>juin 2018 – septembre 2018 (4 mois)<br>Île-de-France</p>
-      </div>
-    </div>
-
-    <!-- Formation 1 -->
-    <div class="timeline-item right">
-      <img src="sorbonne.png" alt="Sorbonne Université logo" class="timeline-logo">
-      <div class="content">
-        <strong>Formation</strong>
-        <h3>Sorbonne Université</h3>
-        <p><em>Master Géographie et Aménagement (GAELE)</em><br>2018 – 2020</p>
-      </div>
-    </div>
-
-    <!-- Formation 2 -->
-    <div class="timeline-item left">
-      <img src="paris1.png" alt="Paris 1 logo" class="timeline-logo">
-      <div class="content">
-        <strong>Formation</strong>
-        <h3>Université Paris 1 Panthéon-Sorbonne</h3>
-        <p><em>Licence, Géographie et Aménagement</em><br>2016 – 2018</p>
-      </div>
-    </div>
-
-    <!-- Formation 3 -->
-    <div class="timeline-item right">
-      <img src="usthb.png" alt="USTHB logo" class="timeline-logo">
-      <div class="content">
-        <strong>Formation</strong>
-        <h3>USTHB</h3>
-        <p><em>Sciences de la Terre</em><br>2012 – 2015</p>
-      </div>
-    </div>
-
-  </div>
-</section>
- <!-- ajout -->
-  
   <footer>
     <p>&copy; 2025 Tahar Adjabi</p>
   </footer>
-  
-  <!-- SCRIPT NUAGES DE MOTS -->
+
+  <!-- MOTS FLOTTANTS -->
   <script>
     const words = [
       ['Data', 12],
@@ -213,5 +161,6 @@
       container.appendChild(wordEl);
     });
   </script>
+
 </body>
 </html>
