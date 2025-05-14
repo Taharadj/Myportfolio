@@ -89,3 +89,121 @@ footer {
   z-index: 2;
   position: relative;
 }
+/* RESET ET FOND GLOBAL */
+body {
+  background-color: #121212; /* fond sombre */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* CONTENEUR */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(30, 30, 30, 0.95);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+  color: #00cec9;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #b2bec3;
+}
+
+/* TITRES ET SOUS-TITRES */
+h2 {
+  border-bottom: 2px solid #00cec9;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #00cec9;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #74b9ff;
+}
+
+/* LISTES */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* LIENS */
+a {
+  color: #81ecec;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACTS */
+.contact-list li a {
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #777;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  z-index: 2;
+  position: relative;
+}
+
+/* MOTS FLOTTANTS - déjà stylés dans le HTML inline, donc rien ici */
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  ul li {
+    font-size: 0.95em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
