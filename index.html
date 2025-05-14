@@ -7,13 +7,28 @@
   <title>Portfolio de Tahar Adjabi</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+
   <style>
+    /* Thème clair par défaut */
     body {
       background-color: #f0f8ff;
+      color: #000;
       margin: 0;
       font-family: sans-serif;
       position: relative;
       z-index: 0;
+    }
+
+    /* Thème sombre si système en mode sombre */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+      }
+
+      a {
+        color: #90caf9;
+      }
     }
 
     .container {
@@ -26,9 +41,10 @@
       position: absolute;
       animation: float 6s ease-in-out infinite;
       white-space: nowrap;
-      opacity: 0.1; /* faible opacité */
-      pointer-events: none; /* ne gêne pas les clics */
+      opacity: 0.1;
+      pointer-events: none;
       z-index: 0;
+      font-weight: bold;
     }
 
     @keyframes float {
@@ -43,20 +59,6 @@
     }
   </style>
 </head>
-  <script>
-  const toggleBtn = document.getElementById('themeToggle');
-
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-  });
-
-  // Initial load
-  if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-  }
-</script>
-
 <body>
 
   <!-- MOTS FLOTTANTS EN ARRIÈRE-PLAN -->
@@ -67,7 +69,6 @@
       <h1>Tahar Adjabi</h1>
       <p>Chef de projet B2B – SFR</p>
       <p>Marly-la-Ville, Île-de-France, France</p>
-      <h1><button id="themeToggle" aria-label="Changer le thème">🌓 Mode</button><h1>
     </header>
 
     <section id="contact">
@@ -137,7 +138,7 @@
       wordEl.textContent = text;
       wordEl.style.fontSize = `${weight * 2 + 10}px`;
       wordEl.style.left = `${Math.random() * 90}%`;
-      wordEl.style.top = `${Math.random() * 1500}px`; // long pour effet sur scroll
+      wordEl.style.top = `${Math.random() * 1500}px`;
       wordEl.style.color = colors[Math.floor(Math.random() * colors.length)];
       wordEl.style.animationDuration = `${4 + Math.random() * 4}s`;
       container.appendChild(wordEl);
