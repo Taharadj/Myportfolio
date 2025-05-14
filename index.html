@@ -1,92 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Tahar Adjabi, Chef de projet B2B – SFR">
-    <title>Portfolio de Tahar Adjabi</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Tahar Adjabi</h1>
-            <p>Chef de projet B2B – SFR</p>
-            <p>Marly-la-Ville, Île-de-France, France</p>
-        </header>
-
-        <section id="contact">
-            <h2>Coordonnées</h2>
-            <ul class="contact-list">
-                <li>📞 <a href="tel:+33603154461">0603154461</a></li>
-                <li>📧 <a href="mailto:tahar.adjabi@outlook.fr">tahar.adjabi@outlook.fr</a></li>
-                <li>🔗 <a href="https://www.linkedin.com/in/tahar-adjabi" target="_blank">LinkedIn</a></li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Principales compétences</h2>
-            <ul>
-                <li>Visualisation de données</li>
-                <li>Analyse des données</li>
-                <li>Ingénierie informatique</li>
-            </ul>
-            <h3>Langues</h3>
-            <ul>
-                <li>Anglais (Professional Working)</li>
-                <li>Français (Native or Bilingual)</li>
-            </ul>
-        </section>
-
-        <section id="summary">
-            <h2>Résumé</h2>
-            <p>
-                Diplômé de la Sorbonne Université avec un Master en Géographie, Aménagement, Environnement et Logistique des Échanges, je suis actuellement Chef de projet SIG / Data / MOA chez Rhôn'Telecom. Fort de mes compétences en systèmes d'information géographique (SIG) et en analyse spatiale, je pilote des projets DATA, du cadrage jusqu'à leur mise en production.
-            </p>
-            <p>
-                Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, consultez <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">mon Calendly</a>.
-            </p>
-        </section>
-
-        <section id="wordcloud">
-           
-            <canvas id="wordCloudCanvas"></canvas>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Tahar Adjabi</p>
-    </footer>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
   <meta charset="UTF-8">
-  <title>Nuage de Mots Flottants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Tahar Adjabi, Chef de projet B2B – SFR">
+  <title>Portfolio de Tahar Adjabi</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       background-color: #f0f8ff;
-      overflow: hidden;
       margin: 0;
-      height: 100vh;
       font-family: sans-serif;
       position: relative;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
     }
 
     .word {
       position: absolute;
       animation: float 6s ease-in-out infinite;
       white-space: nowrap;
+      opacity: 0.1; /* faible opacité */
+      pointer-events: none; /* ne gêne pas les clics */
+      z-index: 0;
     }
 
     @keyframes float {
-      0% { transform: translateY(0); opacity: 0.8; }
-      50% { transform: translateY(-20px); opacity: 1; }
-      100% { transform: translateY(0); opacity: 0.8; }
+      0% { transform: translateY(0); opacity: 0.1; }
+      50% { transform: translateY(-20px); opacity: 0.15; }
+      100% { transform: translateY(0); opacity: 0.1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
+
+  <!-- MOTS FLOTTANTS EN ARRIÈRE-PLAN -->
+  <div id="floatingWords"></div>
+
+  <div class="container">
+    <header>
+      <h1>Tahar Adjabi</h1>
+      <p>Chef de projet B2B – SFR</p>
+      <p>Marly-la-Ville, Île-de-France, France</p>
+    </header>
+
+    <section id="contact">
+      <h2>Coordonnées</h2>
+      <ul class="contact-list">
+        <li>📞 <a href="tel:+33603154461">0603154461</a></li>
+        <li>📧 <a href="mailto:tahar.adjabi@outlook.fr">tahar.adjabi@outlook.fr</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/tahar-adjabi" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Principales compétences</h2>
+      <ul>
+        <li>Visualisation de données</li>
+        <li>Analyse des données</li>
+        <li>Ingénierie informatique</li>
+      </ul>
+      <h3>Langues</h3>
+      <ul>
+        <li>Anglais (Professional Working)</li>
+        <li>Français (Native or Bilingual)</li>
+      </ul>
+    </section>
+
+    <section id="summary">
+      <h2>Résumé</h2>
+      <p>
+        Diplômé de la Sorbonne Université avec un Master en Géographie, Aménagement, Environnement et Logistique des Échanges, je suis actuellement Chef de projet SIG / Data / MOA chez Rhôn'Telecom. Fort de mes compétences en systèmes d'information géographique (SIG) et en analyse spatiale, je pilote des projets DATA, du cadrage jusqu'à leur mise en production.
+      </p>
+      <p>
+        Pour connaître mes disponibilités et planifier un rendez-vous one-to-one, consultez <a href="https://calendly.com/tahar-adjabi/30min" target="_blank">mon Calendly</a>.
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tahar Adjabi</p>
+  </footer>
+
+  <!-- SCRIPT NUAGES DE MOTS -->
   <script>
     const words = [
       ['Data', 12],
@@ -106,7 +113,7 @@
       ['Backlog', 6],
     ];
 
-    const body = document.body;
+    const container = document.getElementById('floatingWords');
     const colors = ["#2c3e50", "#16a085", "#8e44ad", "#2980b9", "#d35400"];
 
     words.forEach(([text, weight]) => {
@@ -115,15 +122,11 @@
       wordEl.textContent = text;
       wordEl.style.fontSize = `${weight * 2 + 10}px`;
       wordEl.style.left = `${Math.random() * 90}%`;
-      wordEl.style.top = `${Math.random() * 80}%`;
+      wordEl.style.top = `${Math.random() * 1500}px`; // long pour effet sur scroll
       wordEl.style.color = colors[Math.floor(Math.random() * colors.length)];
       wordEl.style.animationDuration = `${4 + Math.random() * 4}s`;
-      body.appendChild(wordEl);
+      container.appendChild(wordEl);
     });
   </script>
-</body>
-</html>
-        });
-    </script>
 </body>
 </html>
