@@ -1,4 +1,4 @@
-/* Style général */
+/* STYLE PAR DÉFAUT (MODE CLAIR) */
 body {
   background-color: #f0f8ff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,19 +8,17 @@ body {
   line-height: 1.6;
 }
 
-/* Conteneur principal */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.95); /* transparence légère */
+  background-color: rgba(255, 255, 255, 0.95);
   position: relative;
   z-index: 2;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 
-/* En-tête */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -36,7 +34,6 @@ header p {
   color: #555;
 }
 
-/* Sections */
 section {
   margin-bottom: 30px;
 }
@@ -53,7 +50,6 @@ h3 {
   color: #2980b9;
 }
 
-/* Listes */
 ul {
   list-style-type: none;
   padding: 0;
@@ -63,7 +59,6 @@ ul li {
   margin-bottom: 8px;
 }
 
-/* Liens */
 a {
   color: #2980b9;
   text-decoration: none;
@@ -73,12 +68,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Coordonnées */
 .contact-list li a {
   font-weight: bold;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -89,96 +82,23 @@ footer {
   z-index: 2;
   position: relative;
 }
-/* RESET ET FOND GLOBAL */
-body {
-  background-color: #121212; /* fond sombre */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #e0e0e0;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+
+/* MOTS FLOTTANTS */
+.word {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+  white-space: nowrap;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+  font-weight: bold; /* mots flottants en gras */
 }
 
-/* CONTENEUR */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(30, 30, 30, 0.95);
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+@keyframes float {
+  0%   { transform: translateY(0); opacity: 0.1; }
+  50%  { transform: translateY(-20px); opacity: 0.15; }
+  100% { transform: translateY(0); opacity: 0.1; }
 }
-
-/* HEADER */
-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
-  color: #00cec9;
-}
-
-header p {
-  font-size: 1.1em;
-  color: #b2bec3;
-}
-
-/* TITRES ET SOUS-TITRES */
-h2 {
-  border-bottom: 2px solid #00cec9;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-  color: #00cec9;
-}
-
-h3 {
-  margin-top: 20px;
-  color: #74b9ff;
-}
-
-/* LISTES */
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 8px;
-}
-
-/* LIENS */
-a {
-  color: #81ecec;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* CONTACTS */
-.contact-list li a {
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #777;
-  background-color: #1e1e1e;
-  border-top: 1px solid #333;
-  z-index: 2;
-  position: relative;
-}
-
-/* MOTS FLOTTANTS - déjà stylés dans le HTML inline, donc rien ici */
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
@@ -207,60 +127,42 @@ footer {
   }
 }
 
-#themeToggle {
-  background-color: transparent;
-  color: #81ecec;
-  border: 1px solid #81ecec;
-  padding: 8px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9em;
-  float: right;
-  margin-top: -2.5em;
-  margin-right: 1em;
-  transition: all 0.3s ease;
-}
+/* MODE SOMBRE AUTOMATIQUE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
 
-#themeToggle:hover {
-  background-color: #81ecec;
-  color: #121212;
-}
-body.light-mode {
-  background-color: #f0f8ff;
-  color: #2c3e50;
-}
+  .container {
+    background-color: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
 
-body.light-mode .container {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #2c3e50;
-}
+  header h1 {
+    color: #00cec9;
+  }
 
-body.light-mode a {
-  color: #2980b9;
-}
+  header p {
+    color: #b2bec3;
+  }
 
-body.light-mode h2 {
-  color: #16a085;
-  border-color: #16a085;
-}
+  h2 {
+    color: #00cec9;
+    border-color: #00cec9;
+  }
 
-body.light-mode h3 {
-  color: #2980b9;
-}
+  h3 {
+    color: #74b9ff;
+  }
 
-body.light-mode footer {
-  background-color: #fff;
-  color: #555;
-  border-top: 1px solid #ccc;
-}
+  a {
+    color: #81ecec;
+  }
 
-body.light-mode #themeToggle {
-  color: #2980b9;
-  border-color: #2980b9;
+  footer {
+    background-color: #1e1e1e;
+    color: #777;
+    border-top: 1px solid #333;
+  }
 }
-
-body.light-mode #themeToggle:hover {
-  background-color: #2980b9;
-  color: #fff;
-}
-
