@@ -175,3 +175,133 @@ footer {
     border-top: 1px solid #333;
   }
 }
+
+/*ajout */
+
+/* FRISE CHRONOLOGIQUE ÉLÉGANTE */
+#timeline {
+  margin-top: 60px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #16a085;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.timeline-item.left {
+  left: 0;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item .content {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  flex: 1;
+}
+
+.timeline-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-top: 8px;
+}
+
+.timeline-item.left::before,
+.timeline-item.right::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  width: 15px;
+  height: 15px;
+  background-color: #16a085;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -8px;
+}
+
+.timeline-item.right::before {
+  left: -8px;
+}
+
+.timeline-item h3 {
+  margin: 5px 0 5px;
+  color: #16a085;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .timeline::after {
+    background-color: #00cec9;
+  }
+
+  .timeline-item .content {
+    background-color: rgba(30, 30, 30, 0.95);
+  }
+
+  .timeline-item h3 {
+    color: #00cec9;
+  }
+
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    background-color: #00cec9;
+  }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 20px 20px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    left: 0;
+  }
+}
