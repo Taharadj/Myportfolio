@@ -1,4 +1,4 @@
-/* STYLE PAR DÉFAUT (MODE CLAIR) */
+/* === STYLE PAR DÉFAUT (MODE CLAIR) === */
 body {
   background-color: #f0f8ff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,6 +7,7 @@ body {
   padding: 0;
   line-height: 1.6;
   position: relative;
+  overflow-x: hidden;
 }
 
 .container {
@@ -14,12 +15,13 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.95);
-  position: relative;
-  z-index: 2;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  z-index: 2;
+  position: relative;
 }
 
+/* === EN-TÊTE === */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -35,6 +37,7 @@ header p {
   color: #555;
 }
 
+/* === CONTENU SECTIONS === */
 section {
   margin-bottom: 30px;
 }
@@ -52,7 +55,7 @@ h3 {
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
@@ -73,6 +76,7 @@ a:hover {
   font-weight: bold;
 }
 
+/* === PIED DE PAGE === */
 footer {
   text-align: center;
   padding: 20px;
@@ -80,11 +84,11 @@ footer {
   color: #888;
   background-color: #fff;
   border-top: 1px solid #ccc;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
-/* Frise temporelle */
+/* === FRISE TEMPORELLE === */
 #timeline {
   margin-top: 50px;
 }
@@ -104,7 +108,6 @@ footer {
   width: 40px;
   height: 40px;
   position: absolute;
-  left: -60px;
   top: 10px;
   object-fit: contain;
 }
@@ -129,11 +132,7 @@ footer {
   color: #555;
 }
 
-.timeline-item:before {
-  content: none;
-}
-
-/* Frise temporelle alternée */
+/* Position alternée des items */
 .timeline-item:nth-child(odd) {
   text-align: left;
 }
@@ -158,39 +157,26 @@ footer {
   right: -60px;
 }
 
-.timeline-item:after {
-  content: none;
-}
-
-/* Responsivité de la frise temporelle */
+/* === RESPONSIVE === */
 @media screen and (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
   .timeline-item .timeline-logo {
     width: 30px;
     height: 30px;
+    left: 0 !important;
+    right: auto !important;
   }
 
   .timeline-item .timeline-content {
+    margin: 0 !important;
     padding: 10px;
-  }
-
-  .timeline-item:before {
-    left: -50px;
-  }
-
-  .timeline-item:nth-child(odd) .timeline-content {
-    margin-left: 0;
-  }
-
-  .timeline-item:nth-child(even) .timeline-content {
-    margin-right: 0;
-  }
-
-  .timeline-item:nth-child(odd) .timeline-logo {
-    left: -50px;
-  }
-
-  .timeline-item:nth-child(even) .timeline-logo {
-    right: -50px;
   }
 
   footer {
@@ -198,7 +184,7 @@ footer {
   }
 }
 
-/* MOTS FLOTTANTS */
+/* === MOTS FLOTTANTS === */
 .word {
   position: absolute;
   animation: float 6s ease-in-out infinite;
@@ -206,7 +192,7 @@ footer {
   opacity: 0.1;
   pointer-events: none;
   z-index: 0;
-  font-weight: bold; /* mots flottants en gras */
+  font-weight: bold;
 }
 
 @keyframes float {
@@ -215,7 +201,8 @@ footer {
   100% { transform: translateY(0); opacity: 0.1; }
 }
 
+/* === LOGO === */
 .logo {
-    width: 200px; /* Remplace avec la taille multipliée */
-    height: auto; /* Conserve les proportions */
+  width: 200px;
+  height: auto;
 }
