@@ -214,3 +214,8 @@ footer {
   50%  { transform: translateY(-20px); opacity: 0.15; }
   100% { transform: translateY(0); opacity: 0.1; }
 }
+
+.logo {
+    width: 200px; /* Remplace avec la taille multipliée */
+    height: auto; /* Conserve les proportions */
+}
