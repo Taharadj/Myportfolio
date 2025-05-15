@@ -1,4 +1,4 @@
-/* === STYLE PAR DÉFAUT (MODE CLAIR) === */
+/* STYLE GLOBAL (MODE CLAIR) */
 body {
   background-color: #f0f8ff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +7,6 @@ body {
   padding: 0;
   line-height: 1.6;
   position: relative;
-  overflow-x: hidden;
 }
 
 .container {
@@ -15,13 +14,12 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 2;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  z-index: 2;
-  position: relative;
 }
 
-/* === EN-TÊTE === */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -37,7 +35,6 @@ header p {
   color: #555;
 }
 
-/* === CONTENU SECTIONS === */
 section {
   margin-bottom: 30px;
 }
@@ -55,7 +52,7 @@ h3 {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
@@ -76,7 +73,6 @@ a:hover {
   font-weight: bold;
 }
 
-/* === PIED DE PAGE === */
 footer {
   text-align: center;
   padding: 20px;
@@ -84,107 +80,75 @@ footer {
   color: #888;
   background-color: #fff;
   border-top: 1px solid #ccc;
-  position: relative;
   z-index: 2;
+  position: relative;
 }
 
-/* === FRISE TEMPORELLE === */
+/* --- TIMELINE --- */
 #timeline {
   margin-top: 50px;
 }
 
 .timeline {
   position: relative;
-  padding-left: 50px;
+  margin-left: 100px;
+  padding-left: 40px;
+  border-left: 4px solid #16a085;
 }
 
 .timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
   position: relative;
-  margin-bottom: 30px;
-  padding-left: 50px;
+  gap: 30px;
 }
 
-.timeline-item .timeline-logo {
-  width: 40px;
-  height: 40px;
+.timeline-item::before {
+  content: '';
   position: absolute;
-  top: 10px;
+  left: -38px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #16a085;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-logo {
+  width: 160px;
+  height: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
-.timeline-item .timeline-content {
+.timeline-content {
   background-color: #fff;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
 }
 
-.timeline-item .timeline-content strong {
+.timeline-content strong {
   font-weight: bold;
   color: #2c3e50;
 }
 
-.timeline-item .timeline-content h3 {
+.timeline-content h3 {
   color: #16a085;
+  margin-top: 0;
 }
 
-.timeline-item .timeline-content p {
+.timeline-content p {
   color: #555;
+  margin: 5px 0 0 0;
 }
 
-/* Position alternée des items */
-.timeline-item:nth-child(odd) {
-  text-align: left;
-}
-
-.timeline-item:nth-child(even) {
-  text-align: right;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-  margin-left: 60px;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-  margin-right: 60px;
-}
-
-.timeline-item:nth-child(odd) .timeline-logo {
-  left: -60px;
-}
-
-.timeline-item:nth-child(even) .timeline-logo {
-  right: -60px;
-}
-
-/* === RESPONSIVE === */
-@media screen and (max-width: 768px) {
-  .timeline {
-    padding-left: 20px;
-  }
-
-  .timeline-item {
-    padding-left: 20px;
-  }
-
-  .timeline-item .timeline-logo {
-    width: 30px;
-    height: 30px;
-    left: 0 !important;
-    right: auto !important;
-  }
-
-  .timeline-item .timeline-content {
-    margin: 0 !important;
-    padding: 10px;
-  }
-
-  footer {
-    font-size: 0.8em;
-  }
-}
-
-/* === MOTS FLOTTANTS === */
+/* --- MOTS FLOTTANTS --- */
 .word {
   position: absolute;
   animation: float 6s ease-in-out infinite;
@@ -201,8 +165,36 @@ footer {
   100% { transform: translateY(0); opacity: 0.1; }
 }
 
-/* === LOGO === */
-.logo {
-  width: 200px;
-  height: auto;
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left-width: 2px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .timeline-item::before {
+    left: -14px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
 }
