@@ -377,6 +377,63 @@ ul {
   color: #555;
 }
 
+/* Horizontal bar chart */
+.hbar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hbar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 44px;
+  align-items: center;
+  gap: 10px;
+}
+
+.hbar-label {
+  font-size: 0.85rem;
+  color: #333;
+  text-align: right;
+}
+
+.hbar-track {
+  position: relative;
+  height: 22px;
+}
+
+.hbar {
+  position: relative;
+  height: 100%;
+  background: #0073e6;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+.hbar:hover,
+.hbar:focus-visible {
+  background: #004080;
+}
+
+.hbar .bar-tooltip {
+  bottom: calc(100% + 6px);
+  left: 0;
+  transform: none;
+}
+
+.hbar:hover .bar-tooltip,
+.hbar:focus-visible .bar-tooltip {
+  display: block;
+}
+
+.hbar-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  font-variant-numeric: tabular-nums;
+}
+
 .chart-note {
   margin-top: 32px;
   font-size: 0.78rem;
@@ -500,6 +557,25 @@ footer {
 
   .bar-year {
     font-size: 0.68rem;
+  }
+
+  .hbar-row {
+    grid-template-columns: 96px 1fr 34px;
+    gap: 6px;
+  }
+
+  .hbar-label {
+    font-size: 0.75rem;
+  }
+
+  .kpi-value {
+    font-size: 1.25rem;
+  }
+
+  .hbar .bar-tooltip {
+    white-space: normal;
+    width: max-content;
+    max-width: 200px;
   }
 }
 
