@@ -59,6 +59,77 @@
       </p>
     </section>
 
+    <section id="projects">
+      <h2>Projets</h2>
+      <div class="project-card">
+        <div class="project-header">
+          <h3>✈️ Analyse du trafic aérien à Paris-CDG</h3>
+          <span class="project-badge">Projet Data Analyst</span>
+        </div>
+        <p class="project-intro">
+          Analyse du nombre de vols opérés à l’aéroport Paris-Charles de Gaulle afin d’identifier les tendances de trafic,
+          les pics d’activité et les facteurs de variation (saisonnalité, compagnies, destinations, retards).
+        </p>
+
+        <div class="project-grid">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Mesurer l’évolution du nombre de vols (jour, mois, année).</li>
+              <li>Identifier les heures et jours de pointe.</li>
+              <li>Classer les compagnies et destinations les plus desservies.</li>
+              <li>Analyser la ponctualité et les retards.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Démarche</h4>
+            <ol>
+              <li><strong>Collecte</strong> : données open data (DGAC, Groupe ADP, OpenSky Network).</li>
+              <li><strong>Nettoyage</strong> : doublons, valeurs manquantes, formats de dates et fuseaux horaires.</li>
+              <li><strong>Modélisation</strong> : tables vols, compagnies, aéroports et calendrier.</li>
+              <li><strong>Analyse</strong> : KPI, saisonnalité, comparaison avant/après crise sanitaire.</li>
+              <li><strong>Restitution</strong> : tableau de bord interactif et synthèse des recommandations.</li>
+            </ol>
+          </div>
+        </div>
+
+        <h4>Indicateurs suivis</h4>
+        <div class="kpi-list">
+          <span>Nombre de vols</span>
+          <span>Arrivées / départs</span>
+          <span>Taux de ponctualité</span>
+          <span>Retard moyen</span>
+          <span>Top compagnies</span>
+          <span>Top destinations</span>
+          <span>Heures de pointe</span>
+        </div>
+
+        <h4>Compétences démontrées</h4>
+        <ul>
+          <li>Collecte, nettoyage et préparation de données (ETL).</li>
+          <li>Requêtes SQL : agrégations, jointures, fonctions de fenêtrage.</li>
+          <li>Analyse exploratoire et statistique avec Python (Pandas).</li>
+          <li>Data visualisation et conception de tableaux de bord (Power BI).</li>
+          <li>Storytelling : transformer les chiffres en recommandations métier.</li>
+        </ul>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>Excel</span>
+          <span>Open Data</span>
+        </div>
+
+        <!-- Remplacer les liens "#" par l'URL du dépôt GitHub et du tableau de bord -->
+        <div class="project-links">
+          <a href="#" target="_blank">Code source (GitHub)</a>
+          <a href="#" target="_blank">Tableau de bord</a>
+        </div>
+      </div>
+    </section>
+
     <section id="experience">
       <h2>Expériences professionnelles</h2>
       <div class="timeline">
@@ -128,6 +199,7 @@
       ['Scrum', 9], ['BI', 9], ['SAP', 8],
       ['SIG', 8], ['Stratégie IT', 7], ['Agile', 7],
       ['Kanban', 6], ['User Story', 5], ['Backlog', 5],
+      ['Python', 8], ['SQL', 8], ['Power BI', 7],
     ];
 
     const container = document.getElementById('floatingWords');
