@@ -236,6 +236,72 @@
           <a href="#" target="_blank">Tableau de bord</a>
         </div>
       </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>⚡ Consommation électrique par commune en Île-de-France</h3>
+          <span class="project-badge">Projet Data Analyst</span>
+        </div>
+        <p class="project-intro">
+          Analyse de la consommation d’électricité des communes franciliennes à partir des données ouvertes d’Enedis,
+          pour comparer les territoires, suivre l’évolution dans le temps et repérer les zones les plus consommatrices.
+        </p>
+
+        <div class="project-grid">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Mesurer la consommation par commune et par secteur (résidentiel, professionnel, industriel).</li>
+              <li>Suivre l’évolution d’une année sur l’autre.</li>
+              <li>Comparer les communes ramenées au nombre de points de livraison.</li>
+              <li>Cartographier les écarts entre territoires.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Démarche</h4>
+            <ol>
+              <li><strong>Collecte</strong> : consommation annuelle par commune (open data Enedis), référentiel des communes (INSEE).</li>
+              <li><strong>Nettoyage</strong> : codes communes, fusions de communes, secteurs non diffusés (secret statistique).</li>
+              <li><strong>Enrichissement</strong> : jointure avec la population et les contours communaux.</li>
+              <li><strong>Analyse</strong> : ratios par point de livraison, évolution annuelle, classement des communes.</li>
+              <li><strong>Restitution</strong> : carte choroplèthe et tableau de bord interactif.</li>
+            </ol>
+          </div>
+        </div>
+
+        <h4>Indicateurs suivis</h4>
+        <div class="kpi-list">
+          <span>Consommation totale (MWh)</span>
+          <span>Consommation par point de livraison</span>
+          <span>Part par secteur</span>
+          <span>Évolution annuelle</span>
+          <span>Top communes</span>
+        </div>
+
+        <h4>Compétences démontrées</h4>
+        <ul>
+          <li>Préparation et jointure de jeux de données ouverts hétérogènes.</li>
+          <li>Requêtes SQL : agrégations par territoire, calculs d’évolution.</li>
+          <li>Analyse spatiale et cartographie (QGIS, GeoPandas).</li>
+          <li>Conception d’un tableau de bord orienté décision (Power BI).</li>
+          <li>Connaissance métier du réseau de distribution électrique.</li>
+        </ul>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>GeoPandas</span>
+          <span>SQL</span>
+          <span>QGIS</span>
+          <span>Power BI</span>
+          <span>Open Data</span>
+        </div>
+
+        <!-- Remplacer les liens "#" par l'URL du dépôt GitHub et du tableau de bord -->
+        <div class="project-links">
+          <a href="#" target="_blank">Code source (GitHub)</a>
+          <a href="#" target="_blank">Tableau de bord</a>
+        </div>
+      </div>
     </section>
 
     <section id="experience">
